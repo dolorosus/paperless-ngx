@@ -13,6 +13,9 @@ preload_app = True
 # https://docs.gunicorn.org/en/stable/faq.html#blocking-os-fchmod
 worker_tmp_dir = "/dev/shm"
 
+# gunicorn.conf.py
+certfile = os.getenv("PAPERLESS_TLS_CERTFILE", None)
+keyfile = os.getenv("PAPERLESS_TLS_KEYFILE", None)
 
 def pre_fork(server, worker):
     pass
