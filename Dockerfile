@@ -282,4 +282,4 @@ EXPOSE 8000
 
 CMD ["/usr/local/bin/paperless_cmd.sh"]
 
-HEALTHCHECK --interval=30s --timeout=10s --retries=5 CMD [ "curl", "-fs", "-S", "--max-time", "2", "http://localhost:8000" ]
+HEALTHCHECK --interval=30s --timeout=10s --retries=5 CMD [ "curl", "-fs", "-S", "--max-time", "2", "https://localhost:8000" ]
